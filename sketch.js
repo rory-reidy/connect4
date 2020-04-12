@@ -171,7 +171,12 @@ function draw() {
   if (gameOver) {
     noLoop();
     updateBoard();
-    document.getElementById('scoreboard').innerHTML = "Red Wins!";
+    if (redsTurn) {
+      document.getElementById('scoreboard').innerHTML = "Red Wins!";
+    }
+    else {
+      document.getElementById('scoreboard').innerHTML = "Yellow Wins!";
+    }
   }
   else {
     if (redsTurn) {
